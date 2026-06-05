@@ -54,7 +54,7 @@ bash examples/start_reward_server.sh &
 # 4. Train
 bash examples/run_grpo_opsdgate.sh
 
-# 5. Evaluate (7 VL safety benchmarks)
+# 5. Evaluate (7 VL safety benchmarks) # eval data will release on huggingface soon
 export JUDGE_API_KEY_QWEN="your-key"
 export JUDGE_API_URL="https://your-endpoint/v1/chat/completions"
 cd eval_safe
