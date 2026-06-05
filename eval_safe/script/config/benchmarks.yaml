@@ -1,0 +1,69 @@
+# VL Safety Benchmark 配置注册表
+# 每个 benchmark 的数据路径、judge 类型、prompt 模式等
+
+mssbench:
+  data_dir: data/mssbench
+  data_file: mss_bench_chat.json
+  image_dir: data/mssbench/chat
+  judge_type: api                # api / keyword / api+keyword
+  judge_modes: [safe, effective]
+  has_image: true
+  description: "MSS-Bench Chat: 多模态安全场景基准"
+
+mssembodied:
+  data_dir: data/mssembodied/kzhou35__mssbench
+  data_file: mssbench.zip        # 需要解压获取 combined.json
+  image_dir: data/mssembodied/kzhou35__mssbench  # embodied 子目录在 zip 内
+  judge_type: api
+  judge_modes: [safe, effective]
+  has_image: true
+  description: "MSS-Bench Embodied: 具身安全场景基准"
+
+siuo:
+  data_dir: data/siuo
+  data_file: siuo_gen_bailing_eval.json
+  image_dir: data/siuo/images
+  judge_type: api
+  judge_modes: [safe, effective]
+  has_image: true
+  description: "SIUO: 安全场景理解与操作基准"
+
+beavertails:
+  data_dir: data/beavertails
+  data_file: evaluation_cleaned.json
+  image_dir: data/beavertails/images
+  judge_type: api
+  judge_modes: [winrate_harm, winrate_help]
+  has_image: true
+  baseline_gen_results: ""  # Set via --baseline_beavertails or provide path to baseline gen_results.jsonl
+  description: "BeaverTails-V: 多模态安全评测（胜和率）"
+
+spavl:
+  data_dir: data/spavl
+  data_file: evaluation.json
+  image_dir: data/spavl/images
+  judge_type: api
+  judge_modes: [winrate_harm, winrate_help]
+  has_image: true
+  baseline_gen_results: ""  # Set via --baseline_spavl or provide path to baseline gen_results.jsonl
+  description: "SPA-VL: 安全偏好对齐评测（胜和率）"
+
+vlguard:
+  data_dir: data/vlguard
+  data_file: test.json
+  image_dir: data/vlguard/test_images/test
+  judge_type: api
+  judge_modes: [safe, overrefusal]
+  has_image: true
+  description: "VLGuard: 视觉语言安全防护评测（API judge with reference）"
+
+vlsbench:
+  data_dir: data/vlsbench
+  data_file: data.json
+  image_dir: data/vlsbench
+  judge_type: keyword+api
+  judge_modes: [refusal]
+  has_image: true
+  description: "VLSBench: 视觉安全泄露基准"
+
+
