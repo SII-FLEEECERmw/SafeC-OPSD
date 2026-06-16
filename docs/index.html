@@ -632,16 +632,17 @@
           <p class="hero-subtitle">Safer distillation. Less safety tax.</p>
 
           <div class="author-row">
-            <span>Ming Wen<sup>1,2,3,*</sup></span>
-            <span>Yuxuan Liu<sup>3,4,*</sup></span>
+            <span>Ming Wen<sup>1,2,3,&dagger;</sup></span>
+            <span>Yuxuan Liu<sup>3,4,&dagger;</sup></span>
             <span>Kun Yang<sup>3,4</sup></span>
             <span>Yunhao Feng<sup>3</sup></span>
             <span>Zhuoer Xu<sup>3</sup></span>
             <span>Yuhao Sun<sup>3</sup></span>
             <span>Shiwen Cui<sup>3</sup></span>
             <span>Xiang Zheng<sup>5</sup></span>
-            <span class="corresponding">Xingjun Ma<sup>1,2,&dagger;</sup></span>
-            <span class="corresponding">Yu-Gang Jiang<sup>1,&dagger;</sup></span>
+            <span>Guoyu Wang<sup>6</sup></span>
+            <span class="corresponding">Xingjun Ma<sup>1,2,*</sup></span>
+            <span class="corresponding">Yu-Gang Jiang<sup>1,*</sup></span>
           </div>
 
           <div class="affiliation-row">
@@ -654,22 +655,24 @@
             <span><sup>4</sup> Zhejiang University</span>
             <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
             <span><sup>5</sup> City University of Hong Kong</span>
+            <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+            <span><sup>6</sup> School of Philosophy, Fudan University</span>
           </div>
 
-          <div class="author-note">*Equal Contribution, &dagger;Corresponding authors</div>
+          <div class="author-note">&dagger; Equal Contribution, * Corresponding authors</div>
 
           <div class="button-row">
-            <a class="btn-pill btn-darkish" href="https://arxiv.org/abs/2606.03089" target="_blank" rel="noopener noreferrer">
-              <span class="card-mark">arXiv</span>
+            <a class="btn-pill btn-darkish" href="assets/pdf/paper.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="card-mark">PDF</span>
               <span>Paper</span>
             </a>
             <a class="btn-pill btn-ghost" href="https://github.com/SII-FLEEECERmw/SafeC-OPSD" target="_blank" rel="noopener noreferrer">
               <span class="card-mark">GH</span>
-              <span>code(soon)</span>
+              <span>Code</span>
             </a>
-            <a class="btn-pill btn-ghost" href="https://huggingface.co/datasets" target="_blank" rel="noopener noreferrer">
+            <a class="btn-pill btn-ghost" href="https://huggingface.co/datasets/SII-fleeeecer/SafeC-OPSD" target="_blank" rel="noopener noreferrer">
               <span class="card-mark">HF</span>
-              <span>datasets(soon)</span>
+              <span>Dataset</span>
             </a>
             <a class="btn-pill btn-ghost" href="#citation">
               <span class="card-mark">BT</span>
@@ -795,11 +798,10 @@
                 <button class="copy-btn" id="copyBibtex" type="button">Copy</button>
               </div>
               <pre id="bibtexBlock"><code>@article{wen2026copsd,
-  title        = {Constitutional On-Policy Safe Distillation},
-  author       = {Ming Wen and Yuxuan Liu and Kun Yang and Yunhao Feng and Zhuoer Xu and Yuhao Sun and Shiwen Cui and Xiang Zheng and Xingjun Ma and Yu-Gang Jiang},
-  journal      = {arXiv preprint arXiv:2606.03089},
-  year         = {2026},
-  url          = {https://arxiv.org/abs/2606.03089}
+  title   = {Constitutional On-Policy Safe Distillation},
+  author  = {Wen, Ming and Liu, Yuxuan and Yang, Kun and Feng, Yunhao and Xu, Zhuoer and Sun, Yuhao and Cui, Shiwen and Zheng, Xiang and Wang, Guoyu and Ma, Xingjun and Jiang, Yu-Gang},
+  journal = {arXiv preprint arXiv:2606.03089},
+  year    = {2026}
 }</code></pre>
             </div>
           </div>
@@ -841,7 +843,6 @@
     copyButton.addEventListener("click", async () => {
       try {
         await navigator.clipboard.writeText(bibtexBlock.innerText);
-        copyButton.textContent = "Copied";
         setTimeout(() => {
           copyButton.textContent = "Copy";
         }, 1600);
